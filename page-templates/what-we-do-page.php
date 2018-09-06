@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: What We Do Page
+*/
+?>
 <?php get_header(); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 	<?php if (has_post_thumbnail()) { ?>
@@ -13,13 +18,17 @@
 	<?php } ?>
 	<article <?php post_class('single-post'); ?>>
 		<div class="main-txt">
-			<div class="container">
-			<?php if (!has_post_thumbnail()) { ?>
-			<h1><?php the_title(); ?></h1>
-			<?php } ?>
-			<?php the_content(); ?>
+			<div class="container-fluid">
+				<?php if (!has_post_thumbnail()) { ?>
+				<h1><?php the_title(); ?></h1>
+				<?php } ?>
+				<?php the_content(); ?>
 			</div>
 		</div>
 	</article>
+	<?php get_template_part( 'parts/sections/section', 'team' ); ?>
+	
+	<?php get_template_part( 'parts/sections/section', 'faqs' ); ?>
+	
 <?php endwhile; ?>
 <?php get_footer(); ?>
