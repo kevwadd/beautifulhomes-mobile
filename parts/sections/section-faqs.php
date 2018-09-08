@@ -3,7 +3,7 @@
 	<div class="container-fluid">
 	<h4>Do you always have to feature the whole house?</h4>
 	<p>Not always. The magazines are also looking for makeover features on just one room, whether it's a kitchen/diner, bathroom, bedroom or living room. If you've just completed a renovation project or extension that you're particularly proud of and have 'before' pictures and plans, this may be of interest to a magazine.</p>
-
+	<hr>
 	<h4>What are the benefits of having my home featured in a magazine?</h4>
 	<ul>
 		<li>If you have a business, particularly if it's related to property or interiors, it can help to generate publicity. Key pieces of furniture, homewares or artwork can also be credited in captions.</li>
