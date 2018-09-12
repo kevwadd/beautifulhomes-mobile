@@ -15,9 +15,9 @@ $hp_posts = get_posts($post_args);
 		<?php
 		$feat_img_lg = get_the_post_thumbnail_url($post->ID, 'large');	
 		?>
-		<a href="<?php the_permalink(); ?>" class="grid-img-link">
+		<a href="<?php the_permalink(); ?>" class="grid-img-link d-flex">
 			<span class="img" style="background-image: url(<?php echo $feat_img_lg; ?>)"></span>	
-			<span class="headline"><?php the_title(); ?></span>			
+			<span class="headline align-self-center"><?php the_title(); ?></span>			
 		</a>
 		<?php endforeach; ?>
 		<?php wp_reset_postdata(); ?>

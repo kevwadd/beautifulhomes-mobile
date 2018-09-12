@@ -19,12 +19,12 @@ Template Name: Contact us
 	<article <?php post_class('single-post'); ?>>
 		<div class="container-fluid">
 			<div class="contact-info">
-				<div class="text-center">
+				<div class="contact-item text-center">
 					<h3>For words</h3>
 					<p class="lrg-txt">Karen Wilson</p>
 					<a href="mailto:" class="btn btn-light btn-lg btn-block"><i class="fa fa-envelope pull-left"></i>karen@beautifulhomesnorth.co.uk</a>
 				</div>
-				<div class="text-center">
+				<div class="contact-item text-center">
 					<h3>For photography</h3>
 					<p class="lrg-txt">Katie Lee</p>
 					<a href="mailto:" class="btn btn-light btn-lg btn-block"><i class="fa fa-envelope pull-left"></i>katie@beautifulhomesnorth.co.uk</a>

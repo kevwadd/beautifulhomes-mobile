@@ -1,5 +1,5 @@
 <?php if ( have_posts() ) : ?>
-<div class="post-filters">
-	<?php wp_pagenavi(); ?>	
-</div>
+<div class="post-filters bottom">
+<?php pagination_bar(); ?>
+</div>	
 <?php endif; ?>
