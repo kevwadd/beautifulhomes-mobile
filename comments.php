@@ -2,7 +2,8 @@
 <a id="reader-comments" name="reader-comments"></a>
 <section id="comments" class="comments-area page-section">
 	<?php if ( have_comments() ) { ?>
-			<h2 class="header-caps text-center"><span>Reader Comments</span></h2>
+	<h2 class="header-caps text-center"><span>Reader Comments</span></h2>
+	<div class="comments-list-wrap">
 			<div class="container-fluid">
 			<h3 class="comments-title">
 				<?php
@@ -43,37 +44,18 @@
 			<?php
 			the_comments_pagination( array('prev_text' => '<span>Previous</span>','next_text' => '<span>Next</span>') );
 			?>
-		</div>		
+		</div>	
+	</div>	
 		<?php } ?>
-			
-		<h2 class="header-caps text-center"><span>Leave a Reply</span></h2>
 		<?php 
-			$commenter = wp_get_current_commenter();
-			$req = get_option( 'require_name_email' );
-			$aria_req = ( $req ? " aria-required='true'" : '' );
-			$fields =  array(
-		  'author' =>
-		    '<p class="comment-form-author"><label for="author">' . __( 'Name', 'domainreference' ) .
-		    ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
-		    '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-		    '" size="30"' . $aria_req . ' /></p>',
-		
-		  'email' =>
-		    '<p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) .
-		    ( $req ? '<span class="required">*</span>' : '' ) . '</label>' .
-		    '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-		    '" size="30"' . $aria_req . ' /></p>'
-		    );
 			$args = array(
 			'class_form'    => 'comment-form',
-			'class_submit'  => 'btn btn-secondary',
-			'title_reply'       => '',
+			'class_submit'  => 'btn btn-secondary btn-block',
+			'title_reply'       => '<h3 class="header-caps text-center"><span>Leave a Reply</span></h3>',
 			'title_reply_to'    => '',
-			'fields'	=> $fields,
-			'comment_field' =>  '<div class="form-group"><textarea id="comment" class="form-control " name="comment" cols="45" rows="4" aria-required="true"></textarea></div>'
+			'comment_field' =>  '<div class="form-group"><textarea id="comment" class="form-control " name="comment" cols="45" rows="4" aria-required="true"></textarea></div>',
+			'cancel_reply_link' => __( 'Cancel Reply <i class="fa fa-times"></i>' ),
 			);
-		?>
-		<div class="container-fluid">		
+		?>	
 		<?php comment_form($args); ?>
-		</div>
 </section><!-- #comments -->
