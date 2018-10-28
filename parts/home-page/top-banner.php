@@ -31,7 +31,7 @@ $cats = get_the_category( $banner_post[0]->ID );
 			<?php if (!empty($photos_by)) { ?>
 			Photography: <?php echo $photos_by['display_name']; ?><br>
 			<?php } ?>
-			<?php echo get_the_date( 'F j, Y', $top_post ); ?>
+			<?php echo get_the_date( 'F j, Y', $banner_post[0]->ID ); ?>
 		</div>
 	</div>
 </section>

@@ -17,7 +17,7 @@
 	<nav id="top-nav">
 		<?php wp_nav_menu(array( 
 		'container' => 'false', 
-		'menu' => 'Mobile main nav', 
+		'menu' => 'Mobile Nav', 
 		'menu_class'  => 'list-unstyled',
 		'fallback_cb' => false 
 		) ); 
