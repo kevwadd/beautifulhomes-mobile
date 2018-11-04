@@ -19,17 +19,17 @@ $cats = get_the_category( $banner_post[0]->ID );
 	</div>
 	<div class="banner-txt d-flex flex-column">
 		<div class="cat-label caps text-center"><span><?php echo $cats[0]->name; ?></span></div>
-		<div class="headline d-flex align-self-stretch">
-			<a href="<?php echo get_permalink($banner_post[0]->ID); ?>" class="align-self-center"><?php echo get_the_title($banner_post[0]); ?></a>
+		<div class="headline d-flex flex-column">
+			<a href="<?php echo get_permalink($banner_post[0]->ID); ?>" class="d-flex align-self-center"><?php echo get_the_title($banner_post[0]); ?></a>
 		</div>
 		<div class="post-meta">
 			<?php if (!empty($words_by)) { ?>
-			Words: <?php echo $words_by['display_name']; ?><br>
+			Words: <?php echo $words_by['display_name']; ?>
 			<?php } else { ?>
 			Words: <?php the_author_meta( 'display_name' , $author_id ); ?><br>
 			<?php } ?>
 			<?php if (!empty($photos_by)) { ?>
-			Photography: <?php echo $photos_by['display_name']; ?><br>
+			 | Photography: <?php echo $photos_by['display_name']; ?><br>
 			<?php } ?>
 			<?php echo get_the_date( 'F j, Y', $banner_post[0]->ID ); ?>
 		</div>
